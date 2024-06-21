@@ -23,8 +23,6 @@ if [ "$react_type" == "Vite" ]; then
         cp /Users/mehulbehera/bin/boilerplateserver.ts ./server.ts
         npm i express
         npm i cors
-        current_dir=$(pwd)
-        open -a Terminal "$current_dir" -e "bun --watch server.ts"
         
     fi
     

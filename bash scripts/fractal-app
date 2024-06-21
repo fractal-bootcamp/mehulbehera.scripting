@@ -20,7 +20,7 @@ if [ "$react_type" == "Vite" ]; then
     
     if [ "$express_server" == "Y" ]; then
         
-        cp /Users/mehulbehera/bin/boilerplateserver.ts ./server.ts
+        cp ~/bin/boilerplateserver.ts ./server.ts
         npm i express
         npm i cors
         

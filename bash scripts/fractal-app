@@ -1,0 +1,41 @@
+#!/bin/bash
+
+cd ~/Documents/FractalBootcamp/projects
+
+read -p "Enter Vite or Remix: " react_type
+
+if [ "$react_type" == "Vite" ]; then
+    read -p "Give the new app a name: " app_name
+    
+    if [ -z "$app_name" ]; then
+        echo "App name cannot be empty."
+        exit 1
+    fi
+    
+    npm create vite@latest $app_name -- --template react-swc-ts
+    
+    cd $app_name
+    
+    npm install
+    
+    read -p "Would like to setup an Express server  (Y or N): " express_server
+    
+    
+    
+    code .
+    
+    elif [ "$react_type" == "Remix" ]; then
+    
+    echo "You Typed Remix"
+    exit 1
+    
+else
+    
+    echo "Incorrect Input"
+    exit 1
+    
+fi
+
+
+
+
